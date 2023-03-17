@@ -1,0 +1,326 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: green;
+}
+nav .navCenter .navHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 50px;
+}
+nav .navCenter .navHeader .logo {
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+nav .navCenter .navHeader .logo:hover {
+  font-size: 30px;
+}
+nav .navCenter .navHeader .navToggle {
+  cursor: pointer;
+}
+nav .navCenter .navLinkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+nav .navCenter .navLinkContainer .navLinks li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+nav .navCenter .navLinkContainer .navLinks li .myLink {
+  text-decoration: none;
+}
+nav .navCenter .navLinkContainer.showNavLinks {
+  height: auto;
+}
+
+@media (min-width: 800px) {
+  nav .navCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .navCenter .navHeader .navToggle {
+    display: none;
+  }
+  nav .navCenter .navLinkContainer {
+    height: auto !important;
+  }
+  nav .navCenter .navLinkContainer .navLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 25px;
+  }
+  nav .navCenter .navLinkContainer .navLinks li {
+    padding: 0 5px;
+  }
+}
+.mainFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.mainFlex .subFlex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+}
+.mainFlex .subFlex .myBox {
+  box-shadow: 0 20px 25px -5px #000000, 0 8px 10px -6px #000000;
+  transition: all 0.3s ease-in-out;
+}
+.mainFlex .subFlex .myBox:hover {
+  transform: translateY(-5px);
+}
+.mainFlex .subFlex .imgBox {
+  text-decoration: none;
+}
+.mainFlex .subFlex .imgBox img {
+  margin-top: 5px;
+  width: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.mainFlex .subFlex .text {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .mainFlex .subFlex {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 25px;
+  }
+}
+.loading {
+  text-align: center;
+  margin-top: 20px;
+}
+.loading h1 {
+  font-size: 42px;
+}
+
+.btn1 {
+  margin: 5px;
+  border-color: #ff3333;
+  padding: 5px 10px;
+  color: #ff3333;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .btn1 {
+    font-size: 16px;
+  }
+}
+
+.btn1 {
+  margin: 5px;
+  border-color: #33f;
+  padding: 5px 10px;
+  color: #33f;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .btn1 {
+    font-size: 16px;
+  }
+}
+
+.readMore {
+  border: transparent;
+  background-color: white;
+  cursor: pointer;
+  color: #ff3333;
+}
+
+.loading {
+  text-align: center;
+  color: #282c35;
+  margin-top: 20px;
+}
+.loading h1 {
+  font-size: 42px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.underline {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  border-radius: 20%;
+  height: 0.25rem;
+  width: 5rem;
+  background-color: #33f;
+}
+
+.ourTour {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 5px;
+}
+@media (max-width: 768px) {
+  .ourTour {
+    flex-direction: column;
+  }
+}
+
+.singleTour {
+  width: 80%;
+  background-color: #fcfbfc;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .singleTour {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.centerMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+  .singleTour {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+.important {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.importantBtn {
+  padding: 10px 20px;
+  border: 2px solid #282c35;
+  background-color: transparent;
+  color: #282c35;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup p {
+  margin-bottom: 10px;
+}
+
+.popup ul {
+  margin-bottom: 20px;
+}
+
+.cancelBtn {
+  padding: 5px 10px;
+  background-color: #ff3333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.btn {
+  border-color: #33ff33;
+  cursor: pointer;
+  animation: scale 1s ease-in-out infinite;
+}
+.btn:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.myTheme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 50px);
+}/*# sourceMappingURL=styles.css.map */

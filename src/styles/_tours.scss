@@ -1,0 +1,172 @@
+.loading {
+  text-align: center;
+
+  margin-top: 20px;
+
+  h1 {
+    font-size: 42px;
+  }
+}
+$bgColor: #fcfbfc;
+$bgColor1: #f1f1f1;
+$bgText: #282c35;
+$btnColor: #ff3333;
+$blue: #33f;
+
+@mixin flex($fdir: column, $jcontent: center) {
+  display: flex;
+  flex-direction: $fdir;
+  justify-content: $jcontent;
+  align-items: center;
+}
+
+.btn1 {
+  margin: 5px;
+  border-color: $btnColor;
+  padding: 5px 10px;
+  color: $btnColor;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.btn1 {
+  margin: 5px;
+  border-color: $blue;
+  padding: 5px 10px;
+  color: $blue;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.readMore {
+  border: transparent;
+  background-color: white;
+  cursor: pointer;
+  color: $btnColor;
+}
+
+.loading {
+  text-align: center;
+  color: $bgText;
+  margin-top: 20px;
+
+  h1 {
+    font-size: 42px;
+  }
+}
+
+.mainContainer {
+  @include flex();
+}
+
+.underline {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  border-radius: 20%;
+  height: 0.25rem;
+  width: 5rem;
+  background-color: $blue;
+}
+
+.ourTour {
+  @include flex();
+  background-color: $bgColor1;
+  padding: 5px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.singleTour {
+  width: 80%;
+  background-color: $bgColor;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+.price {
+  @include flex(row, space-around);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.centerMe {
+  @include flex();
+  text-align: left;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+//important button
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+  .singleTour {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+.important {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.importantBtn {
+  padding: 10px 20px;
+  border: 2px solid $bgText;
+  background-color: transparent;
+  color: $bgText;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.popup p {
+  margin-bottom: 10px;
+}
+.popup ul {
+  margin-bottom: 20px;
+}
+.cancelBtn {
+  padding: 5px 10px;
+  background-color: #ff3333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

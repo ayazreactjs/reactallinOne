@@ -1,0 +1,37 @@
+.mainFlex {
+  @include flex(row, center);
+
+  .subFlex {
+    @include grid(3, 2);
+
+    .myBox {
+      box-shadow: 0 20px 25px -5px #000000, 0 8px 10px -6px #000000;
+      //   padding: 5px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    .imgBox {
+      text-decoration: none;
+      img {
+        margin-top: 5px;
+
+        width: 200px;
+        object-fit: contain;
+      }
+    }
+    .text {
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .mainFlex {
+    .subFlex {
+      @include grid(1, 1);
+    }
+  }
+}
